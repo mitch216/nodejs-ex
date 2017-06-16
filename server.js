@@ -99,6 +99,11 @@ app.get('/msbot.html', function (req, res) {
    
 });
 
+app.get('/msbot', function (req, res) {
+    res.render('/views/msbot.html', {});
+
+});
+
 app.get('/hit', function (req, res) {
     res.send('the shit hit');
     
