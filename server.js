@@ -95,19 +95,21 @@ app.get('/pagecount', function (req, res) {
 });
 
 app.get('/msbot.html', function (req, res) {
-    res.render('msbot.html', {})
-
+    res.render('msbot.html', {});
+   
 });
 
 app.get('/hit', function (req, res) {
     res.send('the shit hit');
+    
 
 });
 
 // error handling
 app.use(function(err, req, res, next){
-  console.error(err.stack);
-  res.status(500).send('Something bad happened!');
+    console.error(err.stack);
+    console.log(err);
+  res.status(500).send('Something bad happened!' + err);
 });
 
 initDb(function(err){
