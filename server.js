@@ -58,10 +58,7 @@ var initDb = function(callback) {
   });
 };
 
-app.get('/msbot', function (req, res) {
-    res.render('msbot.html', {})
 
-});
 
 
 app.get('/', function (req, res) {
@@ -95,6 +92,16 @@ app.get('/pagecount', function (req, res) {
   } else {
     res.send('{ pageCount: -1 }');
   }
+});
+
+app.get('/msbot', function (req, res) {
+    res.render('msbot.html', {})
+
+});
+
+app.get('/hit', function (req, res) {
+    res.send('the shit hit');
+
 });
 
 // error handling
