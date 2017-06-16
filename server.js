@@ -59,7 +59,7 @@ var initDb = function(callback) {
 };
 
 app.get('/msbot', function (req, res) {
-    res.sendfile('msbot.html')
+    res.render('msbot.html', {})
 
 });
 
