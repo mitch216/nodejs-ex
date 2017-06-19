@@ -104,6 +104,11 @@ app.get('/msbot', function (req, res) {
 
 });
 
+app.get('/bot', function (req, res) {
+    res.render('msbot.html');
+
+});
+
 app.get('/hit', function (req, res) {
     res.send('the shit hit');
     
