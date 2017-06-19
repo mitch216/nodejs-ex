@@ -111,6 +111,11 @@ app.get('/bot', function (req, res) {
 
 });
 
+app.get('/cortana', function (req, res) {
+    res.send('My Cortana End Point');
+
+});
+
 app.get('/pub', function (req, res) {
     res.render('/public/msbot.html');
 
