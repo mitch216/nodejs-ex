@@ -111,6 +111,11 @@ app.get('/bot', function (req, res) {
 
 });
 
+app.get('/pub', function (req, res) {
+    res.render('/public/msbot.html');
+
+});
+
 app.get('/hit', function (req, res) {
     res.send('the shit hit');
     
