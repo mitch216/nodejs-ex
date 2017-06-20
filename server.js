@@ -110,6 +110,10 @@ app.get('/bot', function (req, res) {
     res.render('msbot.html');
 
 });
+app.get('/botframe', function (req, res) {
+    res.render('botframe');
+
+});
 
 app.get('/cortana', function (req, res) {
     res.send('My Cortana End Point');
