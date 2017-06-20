@@ -13,6 +13,8 @@ app.use(morgan('combined'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); //added by me
+console.log(path.join(__dirname, 'views'));
+app.use(express.static(__dirname + '/public'));
 
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
@@ -101,16 +103,16 @@ app.get('/pagecount', function (req, res) {
 
 
 app.get('/msbot', function (req, res) {
-    res.render('msbot.html');
+    res.render('MSBot.html');
 
 });
 
 app.get('/bot', function (req, res) {
-    res.render('msbot');
+    res.render('msbot.ejs');
 
 });
 app.get('/botframe', function (req, res) {
-    res.render('botframe');
+    res.render('botframe.ejs');
 
 });
 
