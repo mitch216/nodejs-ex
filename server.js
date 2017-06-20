@@ -12,7 +12,7 @@ app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'));
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views')); //added by me
+app.set('views', path.join(__dirname, '/views')); //added by me
 console.log(path.join(__dirname, 'views'));
 app.use(express.static(__dirname + '/public'));
 
@@ -131,7 +131,11 @@ app.get('/hit', function (req, res) {
     
 
 });
+app.get('/info', function (req, res) {
+    res.send(path.join(__dirname, 'views'));
 
+
+});
 // error handling
 app.use(function(err, req, res, next){
     console.error(err.stack);
