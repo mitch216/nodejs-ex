@@ -96,13 +96,9 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
-app.get('/msbot.html', function (req, res) {
-    res.render('msbot', {});
-   
-});
 
 app.get('/msbot', function (req, res) {
-    res.render('/views/msbot.html', {});
+    res.render('msbot.html');
 
 });
 
