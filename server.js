@@ -9,9 +9,11 @@ var express = require('express'),
 Object.assign=require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
-app.use(morgan('combined'))
+app.use(morgan('combined'));
 
-//app.set('views', path.join(dirname, 'views')); //added by me
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views')); //added by me
+
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
@@ -104,7 +106,7 @@ app.get('/msbot', function (req, res) {
 });
 
 app.get('/bot', function (req, res) {
-    res.render('msbot.html');
+    res.render('msbot');
 
 });
 app.get('/botframe', function (req, res) {
